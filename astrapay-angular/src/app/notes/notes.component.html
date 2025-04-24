@@ -1,0 +1,20 @@
+<div class="notes-wrapper">
+  <div class="notes-card">
+    <h2 class="title">📝 Simple Notes</h2>
+
+    <div class="input-group">
+      <input [(ngModel)]="newNote" class="note-input" placeholder="Write a note..." />
+      <button class="add-button" (click)="addNote()">Add Note</button>
+    </div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+
+    <h4 class="subtitle">All Notes</h4>
+    <div *ngIf="notes.length === 0" class="no-notes">No notes yet.</div>
+    <ul class="note-list">
+      <li *ngFor="let note of notes" class="note-item">
+        <span>{{ note.content }}</span>
+        <button class="delete-button" (click)="deleteNote(note.id)">✖</button>
+      </li>
+    </ul>
+  </div>
+</div>

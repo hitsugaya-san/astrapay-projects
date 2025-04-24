@@ -1,77 +1,65 @@
-📝 Simple Notes Application
-A simple notes web application built using Java Spring Boot for the backend and Angular 2 for the frontend. This project is developed as part of the Hiring Challenge - Product Developer from Astrapay.
+# 📝 Simple Notes Application
 
-🚀 Features
-View a list of notes
+Aplikasi sederhana untuk membuat, menampilkan, dan menghapus catatan (**notes**) menggunakan:
 
-Add new notes
+- 🧠 Backend: Java Spring Boot (berbasis [Astrapay starter project](https://github.com/astrapay/astrapay-spring-boot-external))
+- 🎨 Frontend: Angular 2
+- 💾 Penyimpanan data: In-memory (tanpa database)
 
-Delete notes
+---
 
-Basic validation on both frontend and backend
+## 🚀 Fitur Utama
 
-RESTful API implementation
+- Menampilkan daftar catatan
+- Menambah catatan baru
+- Menghapus catatan yang ada
+- Validasi form di backend dan frontend (catatan tidak boleh kosong)
 
-Temporary in-memory storage (no database)
+---
 
-⚙️ Technology Stack
-Back-End: Java Spring Boot
+## ⚙️ Cara Menjalankan Aplikasi
 
-Front-End: Angular 2
+### 1. Jalankan Backend (Spring Boot)
 
-Optional: CSS libraries like Bootstrap or Angular Material
-
-📁 Project Structure
-Backend (Spring Boot)
-RESTful APIs following best practices
-
-Data stored in-memory
-
-Validation and unit testing
-
-Object-Oriented principles using SOLID
-
-Frontend (Angular 2)
-Angular services used to communicate with backend APIs
-
-Simple and responsive UI
-
-Form validation for note creation
-
-🛠 How to Run the Project
-Backend
-
-# Navigate to the backend folder
+```bash
 cd astrapay-spring-boot-external
-
-# Run the Spring Boot application
 ./mvnw spring-boot:run
+```
 
-Frontend
+API akan berjalan di: `http://localhost:8080/api/notes`
 
-# Navigate to the frontend folder
+## 🛠️ API Endpoints
+
+| Method | Endpoint            | Deskripsi                |
+|--------|---------------------|--------------------------|
+| GET    | `/api/notes`        | Ambil semua catatan      |
+| POST   | `/api/notes`        | Tambah catatan baru      |
+| DELETE | `/api/notes/{id}`   | Hapus catatan berdasarkan ID |
+
+---
+
+### 2. Jalankan Frontend (Angular 2)
+
+```bash
 cd astrapay-angular
-
-# Install dependencies
 npm install
-
-# Run the Angular app
 ng serve
-Visit http://localhost:4200 in your browser to access the application.
+```
 
-✅ Validation & Testing
-Backend ensures that note content is not empty
+Aplikasi dapat diakses di: `http://localhost:4200`
 
-Frontend disables submission of empty notes
+---
 
-Basic unit tests implemented for core APIs
+## ✅ Validasi
 
-📷 Screenshots (included in repo)
-✅ Passed validation case
+- Catatan **tidak boleh kosong**
+- Backend dan Frontend sama-sama melakukan validasi
+- Jika validasi gagal, akan ditampilkan pesan error yang sesuai
 
-📬 Postman screenshot showing each API call (URL, request, response)
+---
 
-🧾 Empty notes list UI
+## 📸 Screenshots
 
-✏️ Notes list with 6 items
+- hasil project nya ada di folder screenshots
 
+---
